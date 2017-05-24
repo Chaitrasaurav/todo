@@ -1,0 +1,11 @@
+// ==========================================================================
+// Buttons
+// ==========================================================================
+
+.button{
+  @include buttons(#fff, $brand_color--primary, #000, $br--capsule, 15px);
+}
+
+.button--highlighted{
+  @include buttons($brand_color--primary, null, #fff, $br--capsule, 15px);
+}

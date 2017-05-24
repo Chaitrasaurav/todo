@@ -1,0 +1,55 @@
+// ==========================================================================
+// Functions
+// ==========================================================================
+
+
+
+/* Summary:
+ *
+ * Import Google Fonts URL
+ * Calculate EM values
+ * Calculate REM values
+ * Color palette modifiers
+ * Linear Gradient
+ * Radial Gradient
+ * Animation mixins
+ * Breakpoints mixins
+ *
+ */
+
+
+
+// Calculate EM values
+
+@function em($target, $context: $base_font--size) {
+  @return ($target / $context) * 1em;
+}
+
+// Calculate REM values
+
+@function rem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+
+@mixin rem($size) {
+  font-size: $size; //Fallback in px
+  font-size: rem($size);
+}
+
+
+//for heading
+
+@function headings($from:1, $to:6) {
+    @if $from == $to {
+        @return 'h#{$from}';
+    } @else {
+        @return 'h#{$from},' + headings($from+1, $to);
+    }
+}
+
+
+
+
+
+

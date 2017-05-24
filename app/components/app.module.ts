@@ -1,10 +1,13 @@
 import { NgModule}      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule, Routes } from '@angular/router';
+import { FormsModule }   from '@angular/forms';
+import { HttpModule }    from '@angular/http';
+
+
 import { AppComponent }  from './app.component';
 import { UserListComponent }  from './user.list';
 import { UserDescriptionComponent }  from './user.description';
-import { PageNotFoundComponent }  from './page.not.found';
-import { RouterModule, Routes } from '@angular/router';
 
 const appRoutes: Routes = [
   { 
@@ -14,22 +17,20 @@ const appRoutes: Routes = [
   {
     path: 'user',
     component: UserListComponent
-  },
-  { 
-    path: '**', 
-    component: PageNotFoundComponent 
   }
 ];
 
 @NgModule({
   imports:      [ 
-    BrowserModule, RouterModule.forRoot(appRoutes) 
+    BrowserModule, 
+    FormsModule, 
+    HttpModule, 
+    RouterModule.forRoot(appRoutes) 
   ],
   declarations: [ 
     AppComponent,
     UserListComponent,
-    UserDescriptionComponent,
-    PageNotFoundComponent
+    UserDescriptionComponent
   ],
   bootstrap:    [ 
     AppComponent

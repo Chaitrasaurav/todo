@@ -1,0 +1,9 @@
+// ==========================================================================
+// Fonts
+// ==========================================================================
+@import 'mixins';
+
+@include font-face(Helvetica Neue LT Pro, fonts/helvetica/helveticaneuelt-lt-webfont, normal, normal, eot woff ttf svg);
+@include font-face(Sabon, fonts/sabon/sabon_roman-webfont, 400, normal, woff woff2);
+@include font-face(Sabon, fonts/sabon/sabon-bolditalic-webfont, 700, italic, woff woff2);
+@include font-face(Sabon, fonts/sabon/sabon-italic-webfont, 400, italic, woff woff2);

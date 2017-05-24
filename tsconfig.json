@@ -6,9 +6,10 @@
         "sourceMap": false,
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
-        "outDir" : "build"
+        "outDir" : "app/build/scripts"
     },
 	"exclude": [
-		"node_modules"
+		"node_modules",
+        "gulpfile"
 	]
 }
